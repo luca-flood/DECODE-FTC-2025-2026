@@ -69,6 +69,32 @@ public class saygex extends LinearOpMode {
             }
             if (gamepad1.y) {
                 intake.setPower(-1);
+                transfer.setPower(-1);
+            }
+            else {
+                intake.setPower(0);
+                transfer.setPower(0);
+            }
+
+            if (gamepad1.a) {
+                outtake.setPower(1);
+            }
+            if (gamepad1.b) {
+                outtake.setPower(-1);
+            }
+            if (gamepad1.y) {
+                outtake.setPower(0);
+            }
+
+
+            if (gamepad2.left_trigger > 0.1) {
+                outtake.setPower(1);
+            }
+            else if (gamepad2.right_trigger > 0.1) {
+                outtake.setPower(-1);
+            }
+            else {
+                outtake.setPower(0);
             }
 
             if (gamepad1.a) {
